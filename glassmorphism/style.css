@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('img/bg.jpg');
+  background-size: cover;
+  overflow: hidden;
+  padding: 100px 20px;
+  box-sizing: border-box;
+}
+/* section::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ef3b36;
+  clip-path: circle(65% at 100% -20%);
+  clip path gak terlalu penting gaes
+}
+section::after{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #47aafa;
+  clip-path: circle(35% at 0% 100%);
+  clip path gak terlalu penting gaes */
+/* } */
+.container{
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container .card{
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ! rumus glssmorphism */
+  background: rgba(225, 225, 225, 0.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  backdrop-filter: blur(15px);
+  /* rumusnya grey diberi opacity 0.2 */
+}
+.container .card .imgBx{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  transition: .5s ease-in-out;
+}
+.container .card:hover .imgBx{
+  transform: translateY(-100px);
+}
+.container .card .imgBx img{
+  max-width: 100%;
+  margin: 0 0 -50px;
+  transition: .5s ease-in-out;
+}
+.container .card:hover .imgBx img{
+  transform: translate(-20px, -40px) rotate(25deg) scale(1.4);
+}
